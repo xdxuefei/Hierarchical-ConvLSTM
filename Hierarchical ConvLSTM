@@ -49,7 +49,7 @@ class ConvLSTMCell(nn.Module):
                 Variable(torch.zeros(batch_size, hidden_c, shape[0], shape[1])).cuda())
 
 
-class ConvLSTM(nn.Module):
+class HConvLSTM(nn.Module):
     # input_channels corresponds to the first input feature map
     # hidden state is a list of succeeding lstm layers.
     def __init__(self, input_channels, hidden_channels, kernel_size,num_classes,bias=True):
